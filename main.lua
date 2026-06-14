@@ -1,53 +1,36 @@
---[[
-function cal(n1, n3, n2)
-    if n3 == 0 then
-        return 1
-    else
-        return n1 + n2
-    end
-end
---]]
-
---[[
-
+-- Input
 print("Enter Number: ")
-a = io.read("*n")
-
-print("Arithmetic Operator: ")
-b = io.read(1)
-
-print("Enter your 2nd Number: ")
-c = io.read("*n")
-
-print(cal(a) )
---print(cal(a))
-print()
---]]
-
-print("Enter Number: ")
---a = io.read("*n")
 local a = tonumber(io.read())
 
+print("Arithmetic Operator: ")
+local b = io.read("l")
+
 print("Enter your 2nd Number: ")
---c = io.read("*n")
 local c = tonumber(io.read())
 
-print("Arithmetic Operator: ")
-local b = io.read(1)
+-- Input check
+if type(a) ~= "number" then
+	print("Please enter a number for `a`")
+	return
+end
 
+if type(b) ~= "number" then
+	print("Please enter a number for `b`")
+	return
+end
 
 local result
-
 if b == "+" then
-    result = a + c 
+	result = a + c
 elseif b == "-" then
-    result = a - c 
+	result = a - c
 elseif b == "*" then
-    result = a * c
+	result = a * c
 elseif b == "/" then
-    result = a / c
+	result = a / c
 else
-    print("invalid")
+	print("invalid")
 end
 
 print(result)
+
