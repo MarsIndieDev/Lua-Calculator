@@ -14,8 +14,8 @@ if type(a) ~= "number" then
 	return
 end
 
-if type(b) ~= "number" then
-	print("Please enter a number for `b`")
+if type(c) ~= "number" then
+	print("Please enter a number for `c`")
 	return
 end
 
